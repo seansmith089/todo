@@ -1,38 +1,166 @@
-.App {
-  text-align: center;
+*{
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Istok Web', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* TOP BANNER */
+.banner{
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color:var(--bannerBlue);
+  margin-bottom: 15px;
+}
+
+h1{
+  padding-top: 2rem;
+  font-size: 3rem;
+  color: var(--listItem)
+
+}
+
+form{
+  padding: 2rem 0 1rem 0;
+  width:600px;
+  max-width: 90%;
+
+}
+
+.input-wrapper{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 7fr 50px;
+
+}
+
+.task-input{
+  grid-column: 1/2 ;
+  padding:.8rem 2rem;
+  border-radius: 100px 0 0 100px;
+  border: none;
+  width:100%;
+}
+
+.task-input:focus{
+  outline: none;
+}
+
+.add-btn{
+  background-color: var(--buttonBlue);
+  border: none;
+  border-radius: 0 100px 100px 0;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.plus-symbol{
+  color: var(--bannerBlue);
+  transform: scale(1.5);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+/* LIST OF TO DO'S */
+
+.todo-list-wrapper{
+  width:650px;
+  max-width: 90%;
+  margin-inline: auto;
+  background-color:var(--listItem);
+  border-radius: 100px;
+  border:none;
+}
+
+.task-wrapper, .edit-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: .5rem;
+  position: relative;
+  border-radius: 100px;
+}
+
+.task-wrapper > *{
+  display: inline;
+}
+
+.todo-item-text, .edit-input{
+  padding: .5rem .9rem;
+}
+
+.button-wrapper,.edit-button-wrapper{
+  margin-right: .6rem;
+  display: flex;
+}
+
+.icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  border: none;
+  margin-right: 3px;
+  background-color: transparent;
+  transform: scale(1.3);
+  color: var(--bannerBlue);
+}
+
+.tick:hover{
+  color: green;
+  cursor: pointer;
+  transform: scale(1.8);
+}
+
+.bin:hover{
+  color: rgb(245, 12, 12);
+  cursor: pointer;
+  transform: scale(1.6);
+}
+
+.pencil:hover{
+  color: rgb(166, 16, 212);
+  cursor: pointer;
+  transform: scale(1.8);
+}
+
+/* EDIT */
+.edit-wrapper{
+  display: grid;
+  grid-template-columns: 1fr 80px;
+}
+
+.edit-button-wrapper{
+  /* padding: .8rem 0; */
+  display: flex;
+  justify-content: flex-end;
+}
+
+.edit-input{
+  border: none;
+  background-color:var(--listItem);
+  border-radius: 100px;
+  font-size: 1rem;
+  color: var(--white);
+}
+
+.edit-input:focus{
+  outline: none;
+  border: none;
+}
+
+.cancel:hover{
+  color: rgb(212, 16, 16);
+  cursor: pointer;
+  transform: scale(1.8)
+}
+
+.complete{
+  color: rgb(121, 121, 121);
+  text-decoration: line-through;
+}
+
+.incomplete{
+  color:var(--bannerBlue)
 }

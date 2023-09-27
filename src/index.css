@@ -1,10 +1,14 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root{
+  --bannerBlue:#053B50;
+  --bodyBlue:#176B87;
+  --buttonBlue:#64CCC5;
+  --white:rgb(219, 219, 219);
+  --listItem: #EEEEEE;
+  
+}
+
+body, .App{
+  background-color: var(--bodyBlue);
 }
 
 code {
