@@ -1,5 +1,4 @@
-TITLE  
-Todo List
+## Todo List
 
 DESCRIPTION  
 Todo list created with React and Firebase
